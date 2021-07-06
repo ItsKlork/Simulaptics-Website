@@ -111,73 +111,113 @@
               Features section thing.
               (Uses FontAwesome's icons because im kinda poor ngl)
            -->
-    <div class="container px-4 py-5 text-light" id="features">
-      <h2 class="pb-2 border-bottom">Features</h2>
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div class="col d-flex align-items-start">
-          <div class="icon-square text-light flex-shrink-0 me-3 rounded">
-            <i
-              class="fas fa-broadcast-tower fa-2x bi m-2"
-              width="1em"
-              height="1em"
-            ></i>
+    <div class="bg-dark" id="features">
+      <div class="container px-4 py-5 text-light">
+        <h2 class="pb-2 border-bottom">Features</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="col d-flex align-items-start">
+            <div class="icon-square text-light flex-shrink-0 me-3 rounded">
+              <i
+                class="fas fa-broadcast-tower fa-2x bi m-2"
+                width="1em"
+                height="1em"
+              ></i>
+            </div>
+            <div>
+              <h2>It's mid-air!</h2>
+              <p>
+                The system uses <em>soundwaves</em> in order to provide haptic
+                feedback, which means that the user won't have to wear/hold
+                anything!
+              </p>
+            </div>
           </div>
-          <div>
-            <h2>It's mid-air!</h2>
-            <p>
-              The system uses <em>soundwaves</em> in order to provide the haptic
-              feedback, which means that the user won't have to wear/hold
-              anything!
-            </p>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square text-light flex-shrink-0 me-3">
+              <i class="fas fa-edit fa-2x bi m-2" width="1em" height="1em"></i>
+            </div>
+            <div>
+              <h2>Custom, custom and more custom!</h2>
+              <p>
+                Even if your game is custom coded, you can connect it to our
+                system using the <em>SimulapticsSDK</em>.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="col d-flex align-items-start">
-          <div class="icon-square text-light flex-shrink-0 me-3">
-            <i class="fas fa-edit fa-2x bi m-2" width="1em" height="1em"></i>
-          </div>
-          <div>
-            <h2>Custom, custom and more custom!</h2>
-            <p>
-              Even if your game/simulation is completely custom, you can connect
-              it to our system using the <em>SimulapticsSDK</em>.
-            </p>
-          </div>
-        </div>
-        <div class="col d-flex align-items-start">
-          <div class="icon-square text-light flex-shrink-0 me-3">
-            <i
-              class="fas fa-broadcast-tower fa-2x bi m-2"
-              width="1em"
-              height="1em"
-            ></i>
-          </div>
-          <div>
-            <h2>Enhanced levels of realism!</h2>
-            <p>
-              The mid-air haptic feedback provided enhances the levels of
-              realism in the simulations, making them much more useful for
-              <em>study environments</em> and overall, makes them much more
-              entertaining.
-            </p>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square text-light flex-shrink-0 me-3">
+              <i
+                class="fas fa-broadcast-tower fa-2x bi m-2"
+                width="1em"
+                height="1em"
+              ></i>
+            </div>
+            <div>
+              <h2>Enhanced levels of realism!</h2>
+              <p>
+                The mid-air haptic feedback provided enhances the levels of
+                realism in the simulations, making them much more useful for
+                <em>study environments</em> and overall, makes them much more
+                entertaining.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <div id="content-divider" style="height: 400px"></div>
+
     <!-- WHAT SHOULD I ADD HERE? PANICCCCC -->
-    <div class="container" id="section2">
-      <div class="text-light heebo mx-auto" style="width: fit-content">
-        <h2>
-          NON-HAPTIC VR EXPERIENCE SUCKSSSSSS! USE OUR SYSTEM TO BE COOL AND GET
-          THE QUEEN OF THE CLASSSSSSSSSSS!
-        </h2>
-        <br />
+    <div class="bg-dark">
+      <div class="container col-xxl-8 px-4 py-5 text-light" id="howitworks">
+        <p class="display-1">How does it work?</p>
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img
+              src="media/ultrasonic-transmitter.png"
+              class="d-block mx-lg-auto img-fluid"
+              alt="Ultrasonic transmitter"
+              width="700"
+              height="500"
+              loading="lazy"
+            />
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Ultrasound Waves</h1>
+            <p class="lead">
+              We use walls filled with <em>Ultrasonic Transmitters</em> to
+              create ultrasound waves. The transmitters are precisely timed and
+              triggered to create a focal point where the waves meet and create
+              <em>haptic feedback</em>.
+            </p>
+          </div>
+        </div>
+
+        <div class="row flex-lg-row-reverse align-items-center g-5">
+          <div class="col-10 col-lg-6">
+            <img
+              src="media/unity.png"
+              class="d-block mx-lg-auto img-fluid"
+              alt="Bootstrap Themes"
+              width="700"
+              height="500"
+              loading="lazy"
+            />
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">SimulapticsSDK</h1>
+            <p class="lead">INSERT TEXT IN THE FUTURE.</p>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div id="content-divider" style="height: 100px"></div>
 
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-dark text-light">
-      <!-- Section: Social media -->
+      <!-- Socials -->
       <section
         class="
           d-flex
@@ -186,13 +226,10 @@
           border-bottom
         "
       >
-        <!-- Left -->
         <div class="me-5 d-none d-lg-block">
           <span>Get connected with us on social networks:</span>
         </div>
-        <!-- Left -->
 
-        <!-- Right -->
         <div>
           <a
             href="https://www.instagram.com/simulaptics/"
@@ -213,43 +250,32 @@
             <i class="fab fa-github"></i>
           </a>
         </div>
-        <!-- Right -->
       </section>
-      <!-- Section: Social media -->
 
-      <!-- Section: Links  -->
+      <!-- Links  -->
       <section class="">
         <div class="container text-center text-md-start mt-5">
-          <!-- Grid row -->
           <div class="row mt-3">
-            <!-- Grid column -->
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <!-- Content -->
               <h6 class="text-uppercase fw-bold mb-4">
                 <i class="fas fa-gem me-3"></i>Simulaptics
               </h6>
               <p><em>Team 34. And shefy!</em> (Inside joke)</p>
             </div>
-            <!-- Grid column -->
 
-            <!-- Grid column -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">Products</h6>
               <p>
                 <a href="products.html#room" class="text-reset">Haptic Room</a>
               </p>
             </div>
-            <!-- Grid column -->
 
-            <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
               <p><i class="fas fa-home me-3"></i>(Our very real address)</p>
               <p><i class="fas fa-envelope me-3"></i>info@simulaptics.com</p>
               <p>
-                <i class="fas fa-phone me-3"></i>(Obviously real phone number)
+                <i class="fas fa-phone me-3"></i>(Definitly real phone number)
               </p>
             </div>
             <!-- Grid column -->
