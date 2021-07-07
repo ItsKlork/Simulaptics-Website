@@ -1,31 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/main.css" />
-        <title>Simulaptics - Contact us</title>
-    </head>
-    <body>
-        <div class="shadow">
-            <div class="container">
-                <header class="d-flex py-3 mb-4">
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                    <img src="media/logo.png" class="bi me-2" width="160" height="64" />
-                </a>
-            
-                <ul class="d-flex align-items-center nav nav-pills heebo extra-bold">
-                    <li class="nav-item"><a href="index.html" class="nav-link text-light" aria-current="page">Home</a></li>
-                    <li class="nav-item"><a href="products.html" class="nav-link text-light">PRODUCTS</a></li>
-                    <li class="nav-item"><a href="about-us.html" class="nav-link text-light">ABOUT US</a></li>
-                    <li class="nav-item"><a href="" class="nav-link text-light active">CONTACT US</a></li>
-                    <li class="nav-item"><a href="login.html"><button type="button" class="m-3 btn btn-lg btn-outline-light me-2 heebo extra-bold">Login</button></a></li>
-                </ul>
-                </header>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Simulaptics - Room-scale mid-air VR haptic feedback system."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascript/main.js"></script>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Simulaptics - Contact us</title>
+  </head>
+  <body>
+    <!-- Navbar thing. Mobile support is pain.-->
+    <div class="shadow fixed-top background-color">
+      <nav class="navbar navbar-expand-md navbar-dark container">
+        <a
+          href="/"
+          class="
+            navbar-brand
+            d-flex
+            align-items-center
+            mb-3 mb-md-0
+            me-md-auto
+            text-dark text-decoration-none
+          "
+        >
+          <img src="media/logo.png" class="bi me-2" width="160" height="64" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavDropdown"
+        >
+          <ul
+            class="
+              d-flex
+              align-items-center
+              nav nav-pills
+              heebo
+              extra-bold
+              navbar-nav
+            "
+          >
+            <li class="nav-item">
+              <a href="index.html" class="nav-link text-light ps-2 pe-2 m-1"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="products.html" class="nav-link text-light ps-2 pe-2 m-1"
+                >PRODUCTS</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="about-us.html" class="nav-link text-light ps-2 pe-2 m-1"
+                >ABOUT US</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link text-light ps-2 pe-2 m-1 active"
+                >CONTACT US</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="login.html"
+                ><button
+                  type="button"
+                  class="m-3 btn btn-lg btn-outline-light me-2 heebo extra-bold"
+                >
+                  LOGIN
+                </button></a
+              >
+            </li>
+          </ul>
         </div>
-    </body>
+      </nav>
+    </div>
+
+    <!-- 
+        That's one small step for a man, one giant leap for mankind.
+        Get it? It's a space (divider)!
+    -->
+    <div id="content-divider" style="height: 15vh"></div>
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5 heebo">
+      <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start text-light">
+          <h1 class="display-4 fw-bold lh-1 mb-3">CONTACT US</h1>
+          <p class="col-lg-10 fs-4">
+            The following form is used to create a support ticket for things
+            such as: Sales, Payment Issues and Tech Support.
+          </p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+          <form class="p-4 p-md-5 border rounded-3 text-light heebo extra-bold">
+            <div class="mb-3">
+              <label class="form-label">FULL NAME</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="John Smith"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">PHONE NUMBER</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="999-999-9999"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">MESSAGE</label>
+              <textarea
+                class="form-control"
+                placeholder="What do you need?"
+                rows="3"
+              ></textarea>
+            </div>
+            <button class="w-100 btn btn-lg btn-light" type="submit">
+              SEND TICKET
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-dark text-light">
+      <!-- Socials -->
+      <section
+        class="
+          d-flex
+          justify-content-center justify-content-lg-between
+          p-4
+          border-bottom
+        "
+      >
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+
+        <div>
+          <a
+            href="https://www.instagram.com/simulaptics/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="me-4 text-reset"
+            style="text-decoration: none"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://github.com/ItsKlork"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="me-4 text-reset"
+            style="text-decoration: none"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Simulaptics
+              </h6>
+              <p>
+                <em
+                  >Team 34. And
+                  <a
+                    class="text-light"
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    >shefy!</a
+                  ></em
+                >
+                (Inside joke)
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+              <p>
+                <a href="products.html#room" class="text-reset">Haptic Room</a>
+              </p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i>(Our very real address)</p>
+              <p><i class="fas fa-envelope me-3"></i>info@simulaptics.com</p>
+              <p>
+                <i class="fas fa-phone me-3"></i>(Definitly real phone number)
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2021 Copyright:
+        <span class="text-reset fw-bold">Simulaptics</span>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <script>
+      $("input").intlTelInput({
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js",
+      });
+    </script>
+  </body>
 </html>

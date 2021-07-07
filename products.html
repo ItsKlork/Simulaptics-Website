@@ -1,32 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/main.css" />
-        <title>Simulaptics - Products</title>
-    </head>
-    <body>
-        <div class="shadow">
-            <div class="container">
-                <header class="d-flex py-3 mb-4">
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                    <img src="media/logo.png" class="bi me-2" width="160" height="64" />
-                </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Simulaptics - Products</title>
+  </head>
+  <body>
+    <!-- Navbar thing. Mobile support is pain.-->
+    <div class="shadow fixed-top background-color">
+      <nav class="navbar navbar-expand-md navbar-dark container">
+        <a
+          href="/"
+          class="
+            navbar-brand
+            d-flex
+            align-items-center
+            mb-3 mb-md-0
+            me-md-auto
+            text-dark text-decoration-none
+          "
+        >
+          <img src="media/logo.png" class="bi me-2" width="160" height="64" />
+        </a>
 
-                <!-- Write your comments here -->
-                <ul class="d-flex align-items-center nav nav-pills heebo extra-bold">
-                    <li class="nav-item"><a href="index.html" class="nav-link text-light" aria-current="page">Home</a></li>
-                    <li class="nav-item"><a href="" class="nav-link text-light active">PRODUCTS</a></li>
-                    <li class="nav-item"><a href="about-us.html" class="nav-link text-light">ABOUT US</a></li>
-                    <li class="nav-item"><a href="contact-us.html" class="nav-link text-light">CONTACT US</a></li>
-                    <li class="nav-item"><a href="login.html"><button type="button" class="m-3 btn btn-lg btn-outline-light me-2 heebo extra-bold">Login</button></a></li>
-                </ul>
-                </header>
-            </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavDropdown"
+        >
+          <ul
+            class="
+              d-flex
+              align-items-center
+              nav nav-pills
+              heebo
+              extra-bold
+              navbar-nav
+            "
+          >
+            <li class="nav-item">
+              <a href="index.html" class="nav-link text-light ps-2 pe-2 m-1"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link text-light ps-2 pe-2 m-1 active"
+                >PRODUCTS</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="about-us.html" class="nav-link text-light ps-2 pe-2 m-1"
+                >ABOUT US</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="contact-us.html"
+                class="nav-link text-light ps-2 pe-2 m-1"
+                >CONTACT US</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="login.html"
+                ><button
+                  type="button"
+                  class="m-3 btn btn-lg btn-outline-light me-2 heebo extra-bold"
+                >
+                  LOGIN
+                </button></a
+              >
+            </li>
+          </ul>
         </div>
-    </body>
+      </nav>
+    </div>
+
+    <div class="container w-100 h-100">
+      <div class="row align-items-center h-100 px-4 py-5 text-center">
+        <div class="py-5">
+          <h1 class="display-5 fw-bold text-white">Products</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="fs-5 mb-4 text-light">
+              In this page, you can browse through our products.<br />Learn more
+              about our products, and more!
+            </p>
+          </div>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <!--
+                      Anchor tags that reference the features and how it works section.
+                  -->
+            <a href="#product-overview"
+              ><button type="button" class="btn btn-outline-light btn-lg px-4">
+                Go take a look!
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The product cards thingis -->
+    <div class="container w-100 mb-3" id="product-overview">
+      <div id="content-divider" style="height: 150px"></div>
+      <h1 class="text-light display-5 mb-4">All products</h1>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card bg-dark text-light">
+            <img
+              src="media/demo-product.png"
+              class="card-img-top"
+              alt="Demo product"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Haptic Room</h5>
+              <p class="card-text">Room-scale VR haptic feedback system.</p>
+              <a href="#room" class="btn btn-secondary">More details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card bg-dark text-light">
+            <img
+              src="media/demo-product.png"
+              class="card-img-top"
+              alt="Demo product"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Our other demo product</h5>
+              <!-- haha lorem ipsum go brr -->
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <a href="#other-product" class="btn btn-secondary"
+                >More details</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="content-divider" style="height: 25vh"></div>
+
+    <div class="container w-100" id="products">
+      <div class="product mb-40vh" id="room">
+        <div
+          class="
+            row
+            p-4
+            pb-0
+            pe-lg-0
+            pt-lg-5
+            align-items-center
+            rounded-3
+            border
+            shadow-lg
+            text-light
+            bg-dark
+          "
+        >
+          <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-4 fw-bold lh-1 mb-4">Haptic Room</h1>
+            <p class="lead">
+              A <em>room</em> filled with Ultrasonic transmitters that provides
+              <em>room-scale</em> haptic feedback. The room also includes the
+              Oculus Quest 2 and a <em>high-end</em> gaming computer to run the
+              simulations and the haptic-feedback system.
+            </p>
+            <div
+              class="
+                d-grid
+                gap-2
+                d-md-flex
+                justify-content-md-start
+                mb-4 mb-lg-3
+              "
+            >
+              <a href="contact-us.html">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-lg px-4 me-md-2 fw-bold mt-5"
+                >
+                  Contact us
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 offset-lg-1">
+            <img
+              class="rounded-lg-3 mb-5"
+              src="media/room.png"
+              alt="3D Model of a room"
+              width="300"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="product mb-5" id="other-product">
+        <div
+          class="
+            row
+            p-4
+            pb-0
+            pe-lg-0
+            pt-lg-5
+            align-items-center
+            rounded-3
+            border
+            shadow-lg
+            text-light
+            bg-dark
+          "
+        >
+          <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-4 fw-bold lh-1 mb-4">Other Product</h1>
+            <p class="lead">Hello, this is an amazing product description.</p>
+            <div
+              class="
+                d-grid
+                gap-2
+                d-md-flex
+                justify-content-md-start
+                mb-4 mb-lg-3
+              "
+            >
+              <a href="contact-us.html">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-lg px-4 me-md-2 fw-bold mt-5"
+                >
+                  Contact us
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 p-0 p-2">
+            <img
+              class="rounded-lg-3 mb-5 pe-3"
+              src="media/demo-product.png"
+              alt="Demo product"
+              width="300"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-dark text-light">
+      <!-- Socials -->
+      <section
+        class="
+          d-flex
+          justify-content-center justify-content-lg-between
+          p-4
+          border-bottom
+        "
+      >
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+
+        <div>
+          <a
+            href="https://www.instagram.com/simulaptics/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="me-4 text-reset"
+            style="text-decoration: none"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://github.com/ItsKlork"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="me-4 text-reset"
+            style="text-decoration: none"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Simulaptics
+              </h6>
+              <p>
+                <em
+                  >Team 34. And
+                  <a
+                    class="text-light"
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    >shefy!</a
+                  ></em
+                >
+                (Inside joke)
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+              <p>
+                <a href="products.html#room" class="text-reset">Haptic Room</a>
+              </p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i>(Our very real address)</p>
+              <p><i class="fas fa-envelope me-3"></i>info@simulaptics.com</p>
+              <p>
+                <i class="fas fa-phone me-3"></i>(Definitly real phone number)
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2021 Copyright:
+        <span class="text-reset fw-bold">Simulaptics</span>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </body>
 </html>

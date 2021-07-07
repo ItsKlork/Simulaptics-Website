@@ -7,12 +7,17 @@
 
 .chart {
   padding: 10px;
+  -webkit-transition: ease 400ms;
+  -o-transition: ease 400ms;
   transition: ease 400ms;
   border: solid 1px darkgray;
 }
 
 .chart:hover {
+  -webkit-box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.3);
+  -webkit-transition: ease 200ms;
+  -o-transition: ease 200ms;
   transition: ease 200ms;
 }
 

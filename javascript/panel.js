@@ -23,7 +23,7 @@ const decipher = (salt) => {
 };
 // END of original code that is 100% not from StackoverFlow. (Don't fact check me)
 
-// NOT SECURE AT ALL. good enough tho
+// NOT SECURE AT ALL. Well, at least it's not sitting there in plain text!
 
 const demoPassword = "416a7c7c5b6a6c675f6e7c7c78607d6b";
 const demoEmail = "6a776e627f636a4f7c66627a636e7f7b666c7c216c6062";
@@ -35,9 +35,13 @@ function login() {
   const inputEmail = document.getElementById("email").value;
 
   // Not enough time for regex checks
-  // so we will have to deal with it like that.
+  // so, deal with it.
 
-  if (
+  // KITTY! yay :D
+  if (inputEmail === "cat") {
+    window.open("https://genrandom.com/cats/");
+    document.getElementById("loginform").reset();
+  } else if (
     topTierEncryption(inputPassword) === demoPassword &&
     topTierEncryption(inputEmail) === demoEmail
   ) {
