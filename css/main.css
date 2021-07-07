@@ -16,6 +16,10 @@ body {
   font-weight: 700 !important;
 }
 
+.thin {
+  font-weight: 100 !important;
+}
+
 .active {
   background-color: #4d4d4d !important;
 }

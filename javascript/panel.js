@@ -1,4 +1,4 @@
-// Original code. Not copied from StackoverFlow whatsoever!
+// Deffo original code. Not copied from StackoverFlow whatsoever!
 const cipher = (salt) => {
   const textToChars = (text) => text.split("").map((c) => c.charCodeAt(0));
   const byteHex = (n) => ("0" + Number(n).toString(16)).substr(-2);
@@ -41,9 +41,32 @@ function login() {
     topTierEncryption(inputPassword) === demoPassword &&
     topTierEncryption(inputEmail) === demoEmail
   ) {
-    console.log("hi");
+    // Correct password? Epic.
+    window.open("panel.html", "_self");
   } else {
     document.getElementById("loginform").reset();
     alert("Invalid login details.");
   }
+}
+
+// Some more original code that is 100% not copied from SO.
+// Also, it's kind of sad how much time it took me to realize
+// that I forgot to import the jQuery script...
+function autoPlayYouTubeModal() {
+  var triggerOpen = $("body").find("[data-tagVideo]");
+  triggerOpen.click(function () {
+    var theModal = $(this).data("bs-target"),
+      videoSRC = $(this).attr("data-tagVideo"),
+      videoSRCauto = videoSRC + "?autoplay=1";
+    $(theModal + " iframe").attr("src", videoSRCauto);
+    $(theModal + " button.btn-close").click(function () {
+      $(theModal + " iframe").attr("src", videoSRC);
+    });
+  });
+}
+
+// Thank you UDACITY.COM, very cool!
+function generateRandomDecimalInRangeFormatted(min, max, places) {
+  let value = Math.random() * (max - min + 1) + min;
+  return Number.parseFloat(value).toFixed(places);
 }

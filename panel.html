@@ -15,11 +15,17 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"
+    ></script>
     <script src="javascript/main.js"></script>
-    <script src="javascript/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="javascript/panel.js"></script>
+    <link rel="stylesheet" href="css/panel.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Simulaptics - Login</title>
+    <title>Simulaptics - Panel</title>
   </head>
   <body>
     <div class="shadow fixed-top background-color">
@@ -72,59 +78,97 @@
       </header>
     </div>
 
-    <div class="container w-100 h-100">
-      <div
-        class="
-          row
-          align-items-center
-          justify-content-center
-          h-100
-          px-4
-          py-5
-          text-center
-        "
-      >
-        <form class="text-center text-light w-50 heebo" id="loginform">
-          <h1 class="mt-5 mb-4 h3 mb-3 display-6 fw-normal extra-bold">
-            SIGN IN
-          </h1>
-
-          <div class="form-floating">
-            <input
-              type="email"
-              class="form-control bg-dark text-light"
-              id="email"
-              placeholder="example@example.com"
-            />
-            <label for="floatingInput">Email address</label>
+    <!-- Full screen youtube video thingi -->
+    <div
+      class="modal fade"
+      id="videoModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="videoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
-          <div class="form-floating">
-            <input
-              type="password"
-              class="form-control bg-dark text-light mt-2"
-              id="pass"
-              placeholder="Password"
-            />
-            <label for="floatingPassword">Password</label>
+          <div class="modal-body">
+            <div class="text-center">
+              <iframe
+                class="w-100"
+                style="height: 85vh"
+                src="https://www.youtube.com/embed/tO01J-M3g0U"
+              ></iframe>
+            </div>
           </div>
-
-          <button
-            type="button"
-            class="mt-4 w-100 btn btn-lg btn-dark"
-            onclick="login()"
-          >
-            Sign in
-          </button>
-          <p class="mt-5 mb-3 text-light" style="font-size: 18px">
-            <span class="text-danger">NOTE!</span> For this demo, use the
-            following info:<br />
-            <em class="text-info">Email address:</em>
-            &nbsp;example@simulaptics.com<br />
-            <em class="text-info">Password:</em> &nbsp;NessTechPassword
-          </p>
-        </form>
+        </div>
       </div>
     </div>
+
+    <main class="container pb-5">
+      <div class="row align-bottom" style="height: 250px">
+        <div class="align-bottom heebo">
+          <p class="text-center text-light display-6" style="margin-top: 160px">
+            You are watching
+            <span class="text-danger extra-bold" id="panel-name"
+              >Ness Technologies</span
+            >'s data.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p class="pt-3 ps-2 text-light display-5 heebo thin">Recordings</p>
+          <div class="row border-thing">
+            <div class="col-1 video-container bg-light p-0">
+              <!-- Opens the video in full screen -->
+              <button
+                class="h-100 w-100"
+                style="
+                  margin: 0px;
+                  padding: 0px;
+                  background-image: url(media/demo-video.png);
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                "
+                data-bs-toggle="modal"
+                data-tagVideo="https://www.youtube.com/embed/tO01J-M3g0U"
+                data-bs-target="#videoModal"
+              ></button>
+            </div>
+            <div class="col-1 video-container bg-secondary"></div>
+            <div class="col-1 video-container bg-secondary"></div>
+            <div class="col-1 video-container bg-secondary"></div>
+            <div class="col-1 video-container bg-secondary"></div>
+            <div class="col-1 video-container bg-secondary"></div>
+            <div class="col-1 video-container bg-secondary"></div>
+            <div class="col-1 video-container bg-secondary"></div>
+          </div>
+        </div>
+        <div class="col-1 border-right"></div>
+        <div class="col">
+          <p class="pt-3 ps-2 text-light display-5 heebo thin">Statistics</p>
+          <div
+            class="chart-container"
+            style="position: relative; height: 30vh; width: 40vw"
+          >
+            <canvas id="chart1"></canvas>
+          </div>
+          <div
+            class="chart-container mt-5"
+            style="position: relative; height: 30vh; width: 40vw"
+          >
+            <canvas id="chart2"></canvas>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-dark text-light">
@@ -164,7 +208,7 @@
       </section>
 
       <!-- Links  -->
-      <section class="">
+      <section>
         <div class="container text-center text-md-start mt-5">
           <div class="row mt-3">
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
@@ -189,13 +233,11 @@
                 <i class="fas fa-phone me-3"></i>(Definitly real phone number)
               </p>
             </div>
-            <!-- Grid column -->
           </div>
-          <!-- Grid row -->
         </div>
       </section>
-      <!-- Section: Links  -->
-      <!-- Copyright -->
+
+      <!-- Copyright (Very important, I know) -->
       <div
         class="text-center p-4"
         style="background-color: rgba(0, 0, 0, 0.05)"
@@ -203,8 +245,66 @@
         © 2021 Copyright:
         <span class="text-reset fw-bold">Simulaptics</span>
       </div>
-      <!-- Copyright -->
     </footer>
-    <!-- Footer -->
+
+    <!-- SCRIPTS SECTION -->
+    <script>
+      const numOfCharts = 2;
+      const rand = generateRandomDecimalInRangeFormatted;
+
+      Chart.defaults.color = "#FFF";
+
+      const labels = ["January", "February", "March", "April", "May", "June"];
+      const labelsLabels = [
+        "Average playtime per simulation",
+        "Average simulations recorded per month",
+      ];
+
+      // TODO finish this to add rand min and max.
+      const minMax = [
+        { min: 2, max: 2, places: 1 },
+        { min: 50, max: 100, places: 0 },
+      ];
+
+      for (let i = 0; i < numOfCharts; i++) {
+        const datasetData = [];
+        const { min, max, places } = minMax[i];
+        for (let j = 0; j < 7; j++) {
+          datasetData[j] = rand(min, max, places);
+        }
+
+        const data = {
+          labels: labels,
+          datasets: [
+            {
+              label: labelsLabels[i],
+              backgroundColor: "rgb(255,255,255)",
+              borderColor: "rgb(255,255,255)",
+              data: [...datasetData],
+            },
+          ],
+        };
+
+        const config = {
+          type: "line",
+          data,
+          options: {
+            chart: {
+              responsive: true,
+            },
+          },
+        };
+
+        var myChart = new Chart(
+          document.getElementById("chart" + (i + 1)),
+          config
+        );
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        autoPlayYouTubeModal();
+      });
+    </script>
   </body>
 </html>
